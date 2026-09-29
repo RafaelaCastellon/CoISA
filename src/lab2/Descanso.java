@@ -5,9 +5,9 @@ public class Descanso {
     private int NumeroSemanas;
     private String StatusGeral;
 
-    public Descanso(int horasDescanso, int numeroSemanas) {
-        HorasDescanso = horasDescanso;
+    public Descanso(int numeroSemanas, int horasDescanso) {
         NumeroSemanas = numeroSemanas;
+        HorasDescanso = horasDescanso;
     }
 
     public void defineHorasDescanso(int valor) {
