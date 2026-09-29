@@ -18,7 +18,10 @@ public class RegistroTempoOnline {
 
     }
     public boolean atingiuMetaTempoOnline(){
-
+        if (tempoOnline >= tempoOnlineEsperado) {
+            return true;
+        }
+        return false;
     }
 
     @Override

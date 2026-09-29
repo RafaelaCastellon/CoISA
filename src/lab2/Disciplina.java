@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Disciplina {
     private String nomeDisciplina;
     private int horasEstudo;
-    private String[] notas;
+    private double[] notas;
 
     public Disciplina(String nomeDisciplina) {
         this.nomeDisciplina = nomeDisciplina;
@@ -20,7 +20,16 @@ public class Disciplina {
     }
 
     public boolean aprovado() {
-
+        double total = 0.0;
+        for (double item: notas){
+            total += item;
+        }
+        double media = total / 4;
+        if (media >= 7.0){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
