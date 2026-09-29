@@ -11,7 +11,7 @@ public class CoISA {
         registrarResumos();
     }
     public static void registrarDescanso() {
-        Descanso descanso = new Descanso();
+        Descanso descanso = new Descanso(0, 0);
         System.out.println(descanso.getStatusGeral());
         descanso.defineHorasDescanso(30);
         descanso.defineNumeroSemanas(1);
