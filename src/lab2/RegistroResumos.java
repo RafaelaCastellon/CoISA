@@ -1,5 +1,7 @@
 package lab2;
 
+import java.util.Arrays;
+
 public class RegistroResumos {
     private int numeroDeResumos;
     private Resumo[] resumos;
@@ -9,23 +11,30 @@ public class RegistroResumos {
     }
 
     public void adicionaResumo(String tema, String conteudo){
-
+        resumos[numeroDeResumos] = new Resumo(tema, conteudo);
+        numeroDeResumos ++;
     }
 
-    public String[] pegaResumos(){
-
+    public Resumo[] pegaResumos(){
+        return resumos;
     }
+
 
     public String imprimeResumos(){
-
+        return toString();
     }
 
     public int contaResumo(){
-
+        return numeroDeResumos;
     }
 
-    public boolean temResumo(String tema){
-
+    public boolean temResumo(String tema) {
+        for (Resumo resumo: resumos){
+            if (resumo.getTema().equals(tema)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

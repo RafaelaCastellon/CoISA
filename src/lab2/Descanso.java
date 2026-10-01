@@ -18,7 +18,6 @@ public class Descanso {
 
     }
 
-    public String getStatusGeral() {
-        return StatusGeral;
+    public String getStatusGeral() { return StatusGeral;
     }
 }
