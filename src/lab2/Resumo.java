@@ -3,8 +3,8 @@ package lab2;
 import java.util.Objects;
 
 public class Resumo {
-    private String tema;
-    private String conteudo;
+    private final String tema;
+    private final String conteudo;
 
     public Resumo(String tema, String conteudo) {
         this.tema = tema;
@@ -13,10 +13,7 @@ public class Resumo {
 
     @Override
     public String toString() {
-        return "Resumo{" +
-                "tema='" + tema + '\'' +
-                ", conteudo='" + conteudo + '\'' +
-                '}';
+        return getTema() + ": "  + getConteudo();
     }
 
     public String getTema() {
@@ -32,5 +29,9 @@ public class Resumo {
     @Override
     public int hashCode() {
         return Objects.hashCode(tema);
+    }
+
+    public String getConteudo() {
+        return conteudo;
     }
 }

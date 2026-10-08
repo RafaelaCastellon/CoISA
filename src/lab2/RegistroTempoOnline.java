@@ -6,17 +6,18 @@ public class RegistroTempoOnline {
     private int tempoOnline;
 
     public RegistroTempoOnline(String nomeDisciplina) {
-        this.nomeDisciplina = nomeDisciplina;
+        this(nomeDisciplina, 120);
     }
 
     public RegistroTempoOnline(String nomeDisciplina, int tempoOnlineEsperado) {
         this.nomeDisciplina = nomeDisciplina;
         this.tempoOnlineEsperado = tempoOnlineEsperado;
     }
-
-    public void adicionaTempoOnline(int tempo){
-
+// faltou por aqui, mas ainda tá sendo feito, normal :) @katarinamaelly
+    public void adicionaTempoOnline(int tempoOnline){
+        this.tempoOnline += tempoOnline;
     }
+
     public boolean atingiuMetaTempoOnline(){
         if (tempoOnline >= tempoOnlineEsperado) {
             return true;
@@ -26,10 +27,6 @@ public class RegistroTempoOnline {
 
     @Override
     public String toString() {
-        return "RegistroTempoOnline{" +
-                "nomeDisciplina='" + nomeDisciplina + '\'' +
-                ", tempoOnlineEsperado=" + tempoOnlineEsperado +
-                ", tempoOnline=" + tempoOnline +
-                '}';
+        return nomeDisciplina + ' ' + tempoOnline + '/' + tempoOnlineEsperado;
     }
 }
